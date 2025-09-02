@@ -58,6 +58,10 @@ rm mes/module/mes/psyntax.pp mes/module/mes/psyntax.pp.header
 cp mes/module/srfi/srfi-9-struct.mes mes/module/srfi/srfi-9.mes
 cp mes/module/srfi/srfi-9/gnu-struct.mes mes/module/srfi/srfi-9/gnu.mes
 
+# Use definitions from current M2-Planet/M2libc instead of the ones bundled with mes
+rm lib/m2/x86/x86_defs.M1
+cp /M2libc/x86/x86_defs.M1 lib/m2/x86/x86_defs.M1
+
 # Build mes-m2
 kaem --verbose --strict --file kaem.${MES_ARCH}
 cp bin/mes-m2 ${BINDIR}/mes-m2
