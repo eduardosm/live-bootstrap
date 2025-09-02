@@ -62,6 +62,9 @@ cp mes/module/srfi/srfi-9/gnu-struct.mes mes/module/srfi/srfi-9/gnu.mes
 rm lib/m2/x86/x86_defs.M1
 cp /M2libc/x86/x86_defs.M1 lib/m2/x86/x86_defs.M1
 
+rm lib/m2/x86_64/x86_64_defs.M1
+cp /M2libc/amd64/amd64_defs.M1 lib/m2/x86_64/x86_64_defs.M1
+
 # Build mes-m2
 kaem --verbose --strict --file kaem.${MES_ARCH}
 cp bin/mes-m2 ${BINDIR}/mes-m2
